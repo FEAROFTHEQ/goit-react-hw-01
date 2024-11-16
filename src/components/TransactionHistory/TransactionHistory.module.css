@@ -1,0 +1,23 @@
+.container{
+    width: 100%;
+    border-collapse: collapse;
+    color: black;
+}
+td{
+    padding: 0 10px;
+}
+th, td{
+    border: 1px solid #000000;
+}
+
+.titles{
+    background-color: #1b1b1b;
+    color: white;
+}
+.row{
+    background-color: rgb(244, 244, 244);
+}
+
+.row:nth-child(even) {
+    background-color: #adadad; 
+}

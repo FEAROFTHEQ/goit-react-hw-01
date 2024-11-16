@@ -1,9 +1,11 @@
+import s from "./TransactionHistory.module.css"
+
 function TransactionHistory({items}){
     return(
     <>
-    <table>
+    <table className={s.container}>
   <thead>
-    <tr>
+    <tr className={s.titles}>
       <th>Type</th>
       <th>Amount</th>
       <th>Currency</th>
@@ -11,7 +13,7 @@ function TransactionHistory({items}){
   </thead>
   <tbody>
     {items.map((item)=>
-        <tr key={item.id}>
+        <tr key={item.id} className={s.row}>
         <td>{item.type}</td>
         <td>{item.amount}</td>
         <td>{item.currency}</td>
