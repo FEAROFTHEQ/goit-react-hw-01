@@ -1,3 +1,4 @@
+import FriendListItem from "../FriendListItem/FriendListItem";
 import s from "./FriendList.module.css"
 
 function FriendList ({friends}){
@@ -5,12 +6,7 @@ function FriendList ({friends}){
     <div>
 <ul className={s.container}>
     {friends.map( friend =>     
-    <li key={friend.id} className={s.item}>
-        <img className={s.image} src={friend.avatar} alt="Avatar" width="48" />
-        <p className={s.name}>{friend.name}</p>
-        {friend.isOnline ? <p className={s.online}>Online</p> : <p className={s.offline}>Offline</p> }
-    </li>
-    )}
+        <FriendListItem key={friend.id} friend={friend}/>)}
 </ul>
 </div>
  )
